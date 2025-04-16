@@ -1,0 +1,35 @@
+Sol 5
+The above problem can be solve optimally using the sliding window alogorithm.
+Algorithm (Sliding Window Technique)
+1. Compute the sum of the first window (A[0..K-1]).
+2. Initialize max_sum with this sum.
+3. Slide the window from 1 to n-K:
+4. Subtract A[i-1] (element leaving the window).
+5. Add A[i+K-1] (new element entering the window).
+6. Update max_sum if the current window sum is greater.
+7. Return max_sum.
+
+Time Complexity:O(n) 
+Space Complexity:O(1)
+
+public class MaxSubarraySumK {
+    public static int maxSubarraySumK(int[] arr, int K) {
+        int n = arr.length;
+        if (n < K) {
+            return -1;
+        }
+        int windowSum = 0;
+        for (int i = 0; i < K; i++) {
+            windowSum += arr[i];
+        }
+        int maxSum = windowSum;
+        for (int i = 1; i <= n - K; i++) {
+            windowSum = windowSum - arr[i - 1] + arr[i + K - 1];
+            maxSum = Math.max(maxSum, windowSum);
+        }
+        return maxSum;
+    }
+
+Input: arr[] = [100, 200, 300, 400] , k = 2
+Output: 700
+Explanation: arr3  + arr4 = 700, which is maximum.
