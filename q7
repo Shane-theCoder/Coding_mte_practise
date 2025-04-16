@@ -1,0 +1,9 @@
+Sol 7
+The Sliding Window Technique is an algorithmic approach used to efficiently solve problems involving arrays or strings by maintaining a "window" that slides over the data to process subarrays or substrings optimally. It helps reduce time complexity from O(n²) (brute force) to O(n) (optimized).
+
+Applications in String Problems
+The sliding window technique is widely used in string manipulation problems, such as:
+1. Longest Substring Without Repeating Characters
+2. Minimum Window Substring
+3. Longest Substring with At Most K Distinct Characters
+4. Permutation in String (Anagram Check)
