@@ -1,0 +1,39 @@
+Sol 3
+The equilibrium index is the index where the sum of all the numbers strictly to the left of the index is equal to the sum of all the numbers strictly to the index's right.
+
+class Solution {
+    public int pivotIndex(int[] nums) {
+     int leftSum = 0;
+     int totalSum = 0;
+     for(int num : nums){
+        totalSum += num;
+     }
+     for(int i=0; i<nums.length; i++){
+        totalSum -= nums[i];
+        if(totalSum == leftSum){
+            return i;
+        }
+        leftSum += nums[i];
+     }
+     return -1;   
+    }
+}
+
+Input: nums = [1,7,3,6,5,6]
+Output: 3
+Explanation:
+The pivot index is 3.
+Left sum = nums[0] + nums[1] + nums[2] = 1 + 7 + 3 = 11
+Right sum = nums[4] + nums[5] = 5 + 6 = 11
+
+Algorithm (Using Prefix Sum)
+1. Compute the total sum of the array.
+2. Initialize left sum (left_sum) as 0.
+3. Iterate through the array:
+4. Right sum (right_sum) = total_sum - left_sum - A[i]
+5. If left_sum == right_sum, return the current index.
+6. Otherwise, add A[i] to left_sum and continue.
+7. If no equilibrium index is found, return -1.
+
+Time and Space Complexity
+Optimal Approach using Prefix Sum is O(n) time and O(1) space.
