@@ -1,0 +1,16 @@
+Sol 50
+An equilibrium index in an array is an index such that the sum of elements to the left of it is equal to the sum of elements to the right of it.
+Note:
+->The element at the index itself is not included in either sum.
+->Arrays can have multiple equilibrium indices.
+->If the index is at the start or end of the array, the corresponding left or right sum is considered 0.
+
+Applications of Equilibrium Index
+->Problem Solving in Interviews:
+    Common in coding interviews to test array handling and prefix sum understanding.
+->Load Balancing:
+    In distributed systems, equilibrium can represent a balanced point for task or resource distribution.
+->Partitioning Problems:
+    Used in dividing arrays into two parts with equal sums.
+->Subarray Challenges:
+    Helpful for optimization problems involving prefix or suffix calculations.
