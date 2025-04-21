@@ -1,0 +1,39 @@
+Sol 11
+Algorithm:
+1.Initialize two pointers:
+    left = 0 (start of the array)
+    right = n - 1 (end of the array)
+2.While left < right:
+3.Calculate sum = arr[left] + arr[right]
+    If sum == target, return the two elements or their indices
+    If sum < target, increment left
+    If sum > target, decrement right
+4.If no such pair is found, return "not found"
+
+Code:
+public class TwoSumSortedArray {
+
+    public static int[] findTwoSum(int[] arr, int target) {
+        int left = 0, right = arr.length - 1;
+
+        while (left < right) {
+            int sum = arr[left] + arr[right];
+
+            if (sum == target) {
+                return new int[]{arr[left], arr[right]};
+            } else if (sum < target) {
+                left++;
+            } else {
+                right--;
+            }
+        }
+
+        return new int[]{-1, -1};
+    }
+}
+
+Time Complexity: O(n)
+  Only one pass through the array with two pointers.
+
+Space Complexity: O(1)
+  No extra data structures used.
