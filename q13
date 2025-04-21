@@ -1,0 +1,42 @@
+Sol 13
+Algorithm:
+  1.Create a dummy node to serve as the head of the new list.
+  2.Initialize a pointer tail to the dummy node.
+  3.While both lists are non-empty:
+    Compare the current nodes of both lists.
+    Append the smaller node to tail.next.
+    Move the pointer of the list from which the node was taken.
+    Move tail forward.
+  4.4After the loop, append the remaining part of the non-empty list.
+  5.Return dummy.next
+
+Code:
+public class MergeSortedLinkedLists {
+
+    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(-1); // dummy head
+        ListNode tail = dummy;
+
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                tail.next = l1;
+                l1 = l1.next;
+            } else {
+                tail.next = l2;
+                l2 = l2.next;
+            }
+            tail = tail.next;
+        }
+
+        if (l1 != null) tail.next = l1;
+        if (l2 != null) tail.next = l2;
+
+        return dummy.next;
+    }
+}
+Time Complexity: O(n + m)
+  Where n and m are the lengths of the two input lists.
+  Each node is visited exactly once.
+Space Complexity: O(1)
+  No extra space is used beyond a few pointers.
+  The merged list reuses existing nodes.
