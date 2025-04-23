@@ -1,0 +1,23 @@
+Sol 24
+Bit manipulation refers to the act of algorithmically manipulating bits (0s and 1s) within binary representations of integers using bitwise operators.
+Operator | Symbol | Description
+AND      | &      | Bit is 1 only if both bits are 1
+OR       | `      | `
+XOR      | ^      | Bit is 1 if bits are different
+NOT      | ~      | Inverts all bits
+Left Shift| <<    | Shifts bits to the left (×2)
+Right Shift| >>   | Shifts bits to the right (÷2)
+
+Advantages of Bit Manipulation in Algorithm Design
+1. Speed and Efficiency
+    Bitwise operations are very fast — often a single CPU instruction.
+    Useful for performance-critical applications (e.g., embedded systems, games, cryptography).
+2. Space Optimization
+    You can store multiple flags (true/false) in a single integer using bits.
+    Helps reduce memory usage, especially in large datasets.
+3. Solves Unique Problems Elegantly
+    Many algorithmic problems are naturally suited for bit manipulation:
+    Finding the only non-repeating number in an array
+    Generating power sets
+    Checking if a number is a power of 2
+    Swapping values without a temp variable
