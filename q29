@@ -1,0 +1,25 @@
+Sol 29
+Algorithm
+  1.Negative numbers are not palindromes.
+  2.If the number ends in 0 but is not 0, it can’t be a palindrome (e.g., 10, 100).
+  3.Reverse the last half of the number (stop when the reversed number is greater than or equal to the remaining number).
+  4.Check if:
+    Reversed half == original half (even digits)
+    Reversed half / 10 == original half (odd digits)
+Code:
+public class PalindromeNumber {
+
+    public boolean isPalindrome(int x) {
+        if (x < 0 || (x % 10 == 0 && x != 0)) {
+            return false;
+        }
+        int reversedHalf = 0;
+        while (x > reversedHalf) {
+            reversedHalf = reversedHalf * 10 + x % 10;
+            x = x / 10;
+        }
+        return x == reversedHalf || x == reversedHalf / 10;
+    }
+
+Time Complexity: O(log₁₀(n))
+Space Complexity: O(1)
