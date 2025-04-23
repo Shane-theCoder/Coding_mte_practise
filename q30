@@ -1,0 +1,34 @@
+Sol 30
+A linked list is a linear data structure in which elements (called nodes) are stored in non-contiguous memory locations. Each node contains:
+  1.Data (the value)
+  2.Pointer (or reference) to the next node
+Types of Linked Lists
+    1.Singly Linked List:-	Each node points to the next node
+    2.Doubly Linked List:-	Each node points to both next and previous nodes
+    3.Circular Linked List:-	Last node points back to the first node
+
+Advantages of Linked Lists
+    1.Dynamic Size	Unlike arrays, linked lists can grow or shrink during execution
+    2.Efficient Insertions/Deletions	Inserting/deleting elements (especially at the start) is fast: O(1)
+    3.No Memory Waste	No need to pre-allocate memory like arrays
+
+Disadvantages
+    1.Slow Access Time: Random access is O(n); you have to traverse nodes.
+    2.Extra Memory: Each node stores an extra pointer (next or prev).
+    3.More Complex Implementation than arrays.
+
+Applications in Algorithm Design
+  1. Stacks and Queues
+    Stacks (LIFO) and Queues (FIFO) can be implemented using linked lists with efficient O(1) push/pop operations.
+  2. Hash Tables with Chaining
+    Linked lists are used to handle collisions in hash tables using separate chaining.
+  3. Graph Representations
+    Adjacency lists (a popular way to represent sparse graphs) use linked lists to store neighbors.
+  4. Memory Management (Garbage Collectors)
+    Many garbage collectors use linked lists to manage free memory blocks.
+  5. Undo/Redo Functionality
+    Doubly linked lists help in implementing "back" and "forward" features.
+  6. Polynomial Arithmetic
+    Terms of a polynomial can be stored in a linked list for easy addition and multiplication.
+
+
